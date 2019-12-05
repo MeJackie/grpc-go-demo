@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"github.com/jian/grpc/src/test"
+	"github.com/jian/grpc-go-demo/src/test"
 	"google.golang.org/grpc"
 	"log"
 	"os"

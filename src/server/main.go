@@ -4,8 +4,9 @@ import (
 	"context"
 	"crypto/md5"
 	"fmt"
-	"github.com/jian/grpc/src/test"
+	"github.com/jian/grpc-go-demo/src/test"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 	"log"
 	"net"
 )
@@ -43,7 +44,7 @@ func main()  {
 	reflection.Register(s)
 
 	// 将监听交给gRPC服务处理
-	err = s.Servce(lis)
+	err = s.Serve(lis)
 	if err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
